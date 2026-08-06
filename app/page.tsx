@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { SiteShell } from "@/components/site-shell";
+import { getPosts } from "@/lib/posts";
 import { getProfile } from "@/lib/profile";
 
 export const dynamic = "force-dynamic";
 
 export default function Home() {
   const profile = getProfile();
+  const latestPosts = getPosts().slice(0, 3);
   return (
     <SiteShell>
       <header>
@@ -21,7 +23,24 @@ export default function Home() {
       <h2>資格・免許</h2>
       <ul>{profile.qualifications.map((item) => <li key={item}>{item}</li>)}</ul>
       <h2>ブログ</h2>
-      <p><Link href="/blog">記事一覧を見る →</Link></p>
+      {latestPosts.length > 0 ? (
+        <ul className="latest-posts">
+          {latestPosts.map((post) => (
+            <li key={post.slug}>
+              <time dateTime={post.published}>{post.published}</time>
+              <span>
+                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                {post.tags.length > 0 && (
+                  <small>{post.tags.map((tag) => `#${tag}`).join(" ")}</small>
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>記事はまだありません。</p>
+      )}
+      <p><Link href="/blog">すべての記事を見る →</Link></p>
     </SiteShell>
   );
 }
