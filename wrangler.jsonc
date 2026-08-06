@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "euplotes-site-proxy",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-08-06",
+  "routes": [
+    {
+      "pattern": "euplotes.net/*",
+      "zone_name": "euplotes.net"
+    },
+    {
+      "pattern": "www.euplotes.net/*",
+      "zone_name": "euplotes.net"
+    }
+  ]
+}

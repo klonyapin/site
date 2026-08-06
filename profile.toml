@@ -1,0 +1,55 @@
+name = "唯理/Yuiri"
+nicknames = ["契約", "ゆい", "みさ"]
+email = "me[at]euplotes.net"
+icon_url = "https://storage.googleapis.com/euplotes-site-2hpiyu-assets/profile-icon.jpg"
+introduction = """
+17歳の高校3年生かつ大学生かつ自宅警備員。ぼんやり生きている。最近やっと自我が芽生えそうな気がしている。
+"""
+qualifications = [
+    "普通自動車免許",
+    "第三級陸上特殊無線技士",
+]
+
+[theme]
+background_color = "#f5f5f3"
+text_color = "#1f1f1f"
+accent_color = "rgb(35, 164, 147)"
+
+[blog]
+default_thumbnail = "https://storage.googleapis.com/euplotes-site-2hpiyu-assets/profile-icon.jpg"
+
+[[social_links]]
+label = "GitHub"
+href = "https://github.com/klonyapin"
+
+[[social_links]]
+label = "Twitter"
+href = "https://x.com/samurai_judge"
+
+[[social_links]]
+label = "Discord"
+href = "https://discord.gg/wH7BzXew"
+
+[[social_links]]
+label = "ScrapBox"
+href = "https://scrapbox.io/euplotes/"
+
+[[career]]
+date = "2020-04"
+detail = "長崎県立高校 入学"
+
+[[career]]
+date = "2022-01"
+detail = "長崎県立高校 中退"
+
+[[career]]
+date = "2022-10"
+detail = "web系の会社に入社"
+
+[[career]]
+date = "2023-03"
+detail = "退社"
+
+[[career]]
+date = "2023-04"
+detail = "大学 入学"

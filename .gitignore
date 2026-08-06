@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+npm-debug.log*
+AGENTS.md
+CLAUDE.md
+.cloudflare-token
