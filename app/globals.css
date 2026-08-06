@@ -118,6 +118,26 @@ a {
   margin-top: 24px;
 }
 
+.latest-posts {
+  list-style: none;
+  padding-left: 0;
+}
+
+.latest-posts li {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.latest-posts span {
+  display: grid;
+}
+
+.latest-posts small {
+  opacity: 0.6;
+}
+
 .post-row {
   display: grid;
   grid-template-columns: 112px 1fr;
@@ -244,6 +264,11 @@ a {
 
   .career time {
     display: block;
+  }
+
+  .latest-posts li {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .post-row {
